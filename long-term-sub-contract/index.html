@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPSD 73 - Long-Term Substitute Teacher Contract</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #f1f5f9; 
+            color: #0f172a; 
+        }
+        .contract-body {
+            font-family: 'Merriweather', serif;
+            line-height: 1.85;
+        }
+        
+        @media print {
+            @page {
+                size: letter portrait;
+                margin: 0.5in 0.65in 0.5in 0.65in;
+            }
+            html, body { 
+                background-color: #fff !important; 
+                padding: 0 !important; 
+                margin: 0 !important;
+                font-size: 10pt !important;
+                color: #000 !important;
+            }
+            .no-print { display: none !important; }
+            .print-container { 
+                max-width: none !important; 
+                box-shadow: none !important; 
+                border: none !important; 
+                padding: 0 !important; 
+                margin: 0 !important; 
+                width: 100% !important;
+            }
+            .contract-card {
+                box-shadow: none !important;
+                border: none !important;
+                padding: 0 !important;
+            }
+            input::placeholder { color: transparent !important; }
+            .fill-inline {
+                border-bottom: 1.5px solid #000 !important;
+                font-weight: 700 !important;
+                color: #000 !important;
+                display: inline-block !important;
+                padding: 0 0.25rem !important;
+            }
+            .print-border-b { border-bottom: 1.5px solid #000 !important; }
+            * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8 flex flex-col items-center">
+
+    <!-- NAVIGATION & ACTION BAR -->
+    <div class="no-print max-w-4xl w-full mb-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <a href="../index.html" class="inline-flex items-center gap-2 text-xs font-semibold text-[#002855] hover:text-[#003d82] transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+            Back to Business Office Hub
+        </a>
+        <div class="flex items-center gap-3">
+            <button onclick="window.print()" class="bg-[#002855] hover:bg-[#003d82] text-white font-bold py-2.5 px-6 rounded-xl text-xs tracking-wider uppercase shadow-md transition-all flex items-center gap-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
+                Print / Save Contract PDF
+            </button>
+        </div>
+    </div>
+
+    <!-- MAIN CONTRACT CONTAINER -->
+    <div class="print-container max-w-4xl w-full bg-white rounded-2xl shadow-xl border-t-8 border-[#002855] p-8 md:p-14 contract-card">
+        
+        <!-- HEADER WITH INTEGRATED LOGO -->
+        <header class="text-center border-b pb-5 mb-6 border-slate-200">
+            <div class="flex justify-center items-center mb-3">
+                <img src="./logo.png" 
+                     alt="East Prairie School District 73 Logo" 
+                     class="h-16 md:h-20 w-auto object-contain"
+                     onerror="this.onerror=null; this.src='../logo.png';">
+            </div>
+            <h1 class="text-lg md:text-xl font-extrabold text-[#002855] tracking-wide uppercase font-sans">
+                East Prairie School District 73
+            </h1>
+            <h2 class="text-sm md:text-base font-bold text-slate-700 tracking-wide uppercase font-sans mt-0.5">
+                Long-Term Substitute Teacher’s Contract
+            </h2>
+        </header>
+
+        <!-- CONTRACT TEXT -->
+        <div class="contract-body text-[12.5px] md:text-[13px] text-slate-800 space-y-3.5 text-justify">
+            
+            <p>
+                <strong>THIS CONTRACT</strong> is entered into by and between the <strong>Board of Education of East Prairie School District 73</strong>, Cook County, Illinois (“Board”) and 
+                <input type="text" id="teacherName" class="fill-inline border-b-2 border-slate-400 bg-transparent text-[#002855] font-bold px-2 py-0.5 outline-none text-center w-56 md:w-64" placeholder="[ Substitute Teacher Name ]">
+                (“Long-Term Substitute Teacher”), collectively referred to as the “Parties,” on this 
+                <input type="text" id="contractDay" class="fill-inline border-b-2 border-slate-400 bg-transparent text-[#002855] font-bold px-1 py-0.5 outline-none text-center w-12" placeholder="DD">
+                day of 
+                <input type="text" id="contractMonth" class="fill-inline border-b-2 border-slate-400 bg-transparent text-[#002855] font-bold px-1 py-0.5 outline-none text-center w-28" placeholder="Month">, 
+                <strong>2026</strong>. In consideration of the mutual promises set forth below, the Parties agree as follows:
+            </p>
+
+            <ol class="list-decimal pl-6 space-y-3">
+                <li>
+                    The Long-Term Substitute Teacher is hereby employed beginning 
+                    <input type="text" id="startDate" class="fill-inline border-b-2 border-slate-400 bg-transparent text-[#002855] font-bold px-2 py-0.5 outline-none text-center w-36" placeholder="MM/DD/YYYY">, 
+                    <strong>2026</strong> as an at-will employee of the Board and, as such, he or she has no expectation of continued employment by the Board and his or her employment may be terminated by the Board at any time for any non-discriminatory reason, without restriction.
+                </li>
+
+                <li>
+                    The Long-Term Substitute Teacher will be paid at the daily Niles Township Substitute Cooperative rate of <strong>$170.00/day</strong> for the first forty-five (45) days of service* while filling the long-term substitute vacancy, less all applicable withholdings. Upon the forty-sixth (46th) day of continual service in the specified long-term vacancy requiring a substitute, the Long-Term Substitute Teacher will be paid at a rate of <strong>$302.20/day</strong> (reflecting a prorated first-year teacher salary of $55,000 for a 182-day school year). A lump sum payment will be issued to retroactively adjust the daily rate for the first forty-five (45) days of continuous service in this role to $302.20/day. If the Long-Term Substitute Teacher leaves the position or is terminated with cause prior to completing forty-five (45) days of service, they will not be entitled to the retroactive rate adjustment. The Long-Term Substitute Teacher will be entitled to no other compensation or benefits. In the event the Long-Term Substitute Teacher becomes eligible for health insurance coverage under applicable law, including but not limited to the Affordable Care Act, any such coverage provided shall be at one hundred percent (100%) of the Long-Term Substitute Teacher’s own cost.
+                </li>
+
+                <li>
+                    The Long-Term Substitute Teacher will perform the duties and responsibilities of a teacher and other duties which he or she may lawfully perform, as assigned by the Board.
+                </li>
+
+                <li>
+                    As a condition of employment, the Long-Term Substitute Teacher will authorize a fingerprint-based criminal history records check pursuant to Section 10-21.9 of the Illinois School Code (105 ILCS 5/10-21.9) and will also provide proof that he or she is licensed to serve as a long-term substitute teacher according to applicable Illinois law. The Long-Term Substitute Teacher acknowledges that he or she is a mandated reporter under the Illinois Abused and Neglected Child Reporting Act (325 ILCS 5/1 et seq.) and agrees to comply with all reporting requirements and complete required mandated reporter training as mandated by law.
+                </li>
+
+                <li>
+                    The Long-Term Substitute Teacher will abide by and be subject to all applicable Board policies while employed by the Board.
+                </li>
+
+                <li>
+                    This contract contains all of the terms agreed upon by the Parties and supersedes all prior agreements, arrangements and communications between the Parties concerning the Long-Term Substitute Teacher’s employment, whether oral or written.
+                </li>
+
+                <li>
+                    In the event the regular teacher returns prior to the anticipated end date of the long-term assignment, this contract and assignment shall immediately terminate without required advance notice. Should the certified staff member for whom the vacancy is being filled return from their leave before the 45-day retroactive adjustment, the <strong>$302.20/day</strong> rate will still be honored by the district for the days that were worked by the Long-Term Substitute.
+                </li>
+
+                <li>
+                    Contributions to the Teachers’ Retirement System of the State of Illinois (TRS) shall be remitted in accordance with statutory requirements and TRS rules governing substitute teacher eligibility and earnings reporting.
+                </li>
+
+                <li>
+                    The Long-Term Substitute Teacher is not eligible for paid sick leave, personal leave, or paid holidays and planned school closures. If an emergency school closure occurs on a day the Long-Term Substitute Teacher is scheduled to work, compensation will be provided for that day, provided the Long-Term Substitute Teacher performs required remote instruction or e-learning responsibilities as assigned.
+                </li>
+
+                <li>
+                    The Long-Term Substitute Teacher’s performance may be evaluated periodically by the building principal or designee.
+                </li>
+            </ol>
+        </div>
+
+        <!-- SIGNATURE SECTION -->
+        <div class="mt-10 pt-4 font-sans">
+            <div class="grid grid-cols-2 gap-12 items-end">
+                <!-- SUBSTITUTE SIGNATURE -->
+                <div class="flex flex-col">
+                    <div class="border-b-2 border-slate-400 h-10 w-full print-border-b"></div>
+                    <span class="font-bold text-slate-800 text-xs uppercase tracking-wider mt-2">Long-Term Substitute Teacher</span>
+                    <span class="text-xs text-slate-500 mt-0.5" id="sigTeacherNameDisplay">Signature / Date</span>
+                </div>
+
+                <!-- BOARD / CSBO SIGNATURE -->
+                <div class="flex flex-col">
+                    <div class="border-b-2 border-slate-400 h-10 w-full print-border-b"></div>
+                    <span class="font-bold text-slate-800 text-xs uppercase tracking-wider mt-2">East Prairie School District 73</span>
+                    <span class="text-xs text-slate-500 mt-0.5">Chief School Business Official / Date</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTNOTE -->
+        <footer class="mt-8 pt-3 border-t border-slate-200 text-[10px] text-slate-500 italic">
+            *Should the district be scheduled for a half-day dismissal of students and/or staff, a full day will be counted towards the 45-day rate adjustment bank.
+        </footer>
+    </div>
+
+    <!-- SCRIPT FOR DYNAMIC SYNC -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const nameInput = document.getElementById('teacherName');
+            const sigDisplay = document.getElementById('sigTeacherNameDisplay');
+
+            if (nameInput && sigDisplay) {
+                nameInput.addEventListener('input', () => {
+                    sigDisplay.innerText = nameInput.value.trim() ? `${nameInput.value.trim()} (Signature / Date)` : 'Signature / Date';
+                });
+            }
+        });
+    </script>
+</body>
+</html>
