@@ -152,19 +152,31 @@
 
         <!-- SIGNATURE SECTION -->
         <div class="mt-10 pt-4 font-sans">
-            <div class="grid grid-cols-2 gap-12 items-end">
-                <!-- SUBSTITUTE SIGNATURE -->
-                <div class="flex flex-col">
-                    <div class="border-b-2 border-slate-400 h-10 w-full print-border-b"></div>
-                    <span class="font-bold text-slate-800 text-xs uppercase tracking-wider mt-2">Long-Term Substitute Teacher</span>
-                    <span class="text-xs text-slate-500 mt-0.5" id="sigTeacherNameDisplay">Signature / Date</span>
+            <div class="grid grid-cols-2 gap-10 items-end">
+                <!-- SUBSTITUTE SIGNATURE & DATE -->
+                <div class="space-y-4">
+                    <div>
+                        <div class="border-b-2 border-slate-400 h-9 w-full print-border-b"></div>
+                        <span class="font-bold text-slate-800 text-xs uppercase tracking-wider mt-1.5 block">Long-Term Substitute Teacher</span>
+                        <span class="text-xs text-slate-500 mt-0.5 block" id="sigTeacherNameDisplay">Signature</span>
+                    </div>
+                    <div>
+                        <div class="border-b-2 border-slate-400 h-8 w-full print-border-b"></div>
+                        <span class="font-bold text-slate-800 text-xs uppercase tracking-wider mt-1 block">Date</span>
+                    </div>
                 </div>
 
-                <!-- BOARD / CSBO SIGNATURE -->
-                <div class="flex flex-col">
-                    <div class="border-b-2 border-slate-400 h-10 w-full print-border-b"></div>
-                    <span class="font-bold text-slate-800 text-xs uppercase tracking-wider mt-2">East Prairie School District 73</span>
-                    <span class="text-xs text-slate-500 mt-0.5">Chief School Business Official / Date</span>
+                <!-- BOARD / CSBO SIGNATURE & DATE -->
+                <div class="space-y-4">
+                    <div>
+                        <div class="border-b-2 border-slate-400 h-9 w-full print-border-b"></div>
+                        <span class="font-bold text-slate-800 text-xs uppercase tracking-wider mt-1.5 block">East Prairie School District 73</span>
+                        <span class="text-xs text-slate-500 mt-0.5 block">Chief School Business Official</span>
+                    </div>
+                    <div>
+                        <div class="border-b-2 border-slate-400 h-8 w-full print-border-b"></div>
+                        <span class="font-bold text-slate-800 text-xs uppercase tracking-wider mt-1 block">Date</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -183,7 +195,7 @@
 
             if (nameInput && sigDisplay) {
                 nameInput.addEventListener('input', () => {
-                    sigDisplay.innerText = nameInput.value.trim() ? `${nameInput.value.trim()} (Signature / Date)` : 'Signature / Date';
+                    sigDisplay.innerText = nameInput.value.trim() ? `${nameInput.value.trim()} (Signature)` : 'Signature';
                 });
             }
         });
